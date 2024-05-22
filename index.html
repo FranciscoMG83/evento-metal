@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MetalRock Fest</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="description" content="Página de presentación del evento MetalRock">
+    <meta name="og:title" content="Apúntate al MetalRock">
+</head>
+<body>
+    <header class="header">
+        <h1 class="header__title"><a href="#top">MetalRock Fest</a></h1>
+        <ul class="header__links">
+            <li class="header__link"><a href="#evento">Te Esperamos</a></li>
+            <li class="header__link"><a href="#participantes">Bandas Participantes</a></li>
+            <li class="header__link"><a href="#presentacion">Presentación</a></li>
+            <li class="header__link"><a href="#inscripcion">Inscríbete</a></li>
+            <li class="header__link"><a href="#mapa">Mapa</a></li>
+        </ul>
+        <audio controls>
+            <source src="./assets/Van Halen-Jump.mp3"/>
+        </audio>
+    </header>
+    <!-- <section class="audio-container">
+        <audio controls>
+            <source src="/Curso Udemy/Fest/assets/mixkit-tech-house-vibes-130.mp3"/>
+        </audio>
+    </section> --><!-- <iframe src="https://www.rockfm.fm/programas/jorge-richter" frameborder="0"></iframe> -->
+    <section id="top">
+        <picture>
+            <source media="(max-width:640px)" srcset="./assets/concierto640.jpg">
+            <source media="(max-width:1280px)" srcset="./assets/concierto1280.jpg">
+            <source media="(max-width:1920px)" srcset="./assets/concierto1920.jpg">
+            <img src="./assets/concierto1920.jpg" alt="fondo de concierto">
+        </picture>
+        <div class="top__overlay">
+            <!-- <div class="top__text__h2">
+                <h2>Festival MetalRock</h2>
+            </div> -->
+            <div class="top__text">
+                
+                <h2>Festival MetalRock</h2>
+                <h3>El Renacimiento del Rock y Metal Este verano.</h3>
+                <ul>
+                    <li>Género Musical: Rock y Metal</li>
+                    <li>Fecha: Verano de 2024.</li>
+                    <li>Ambiente: Tardes y noches de energía vibrante y luces deslumbrantes.</li>
+                    <li>Público: Espacio para los verdaderos amantes del rock y metal.</li>
+                    <li>Experiencia: Inmersión total en la música con actuaciones apasionadas.</li>
+                </ul>
+                <div id="counter">
+                    <h2>Quedan......</h2>
+                    <p><span id="days">0</span>días</p>
+                    <p><span id="hours">0</span>horas</p>
+                    <p><span id="minutes">0</span>minutos</p>
+                    <p><span id="seconds">0</span>segundos</p>
+                </div>
+                <script>
+                    const days = document.querySelector("#days");
+                    const hours = document.querySelector("#hours");
+                    const minutes = document.querySelector("#minutes");
+                    const seconds = document.querySelector("#seconds");                    
+
+                    const updatecounter = () => {
+                        const now = new Date();
+                        const eventdate = new Date("2024/08/24");
+                        const timeleft = eventdate - now;
+
+                        const daysleft = Math.floor(timeleft / (1000 * 60 * 60 * 24));
+                        const hoursleft = Math.floor((timeleft / (1000 * 60 * 60)) % 24);
+                        const minutesleft = Math.floor((timeleft / (1000 * 60)) % 60);
+                        const secondsleft = Math.floor((timeleft / 1000) % 60);
+
+                        if (timeleft <=0) {
+                            const counter = document.querySelector("#counter");
+                            counter.innerHTML = "<h2>El evento ha terminado</h2>";
+                            return;
+                            // days.textContent = 0;
+                            // hours.textContent = 0;
+                            // minutes.textContent = 0;
+                            // seconds.textContent = 0;
+                        }
+
+                        days.textContent = daysleft;
+                        hours.textContent = hoursleft;
+                        minutes.textContent = minutesleft;
+                        seconds.textContent = secondsleft;
+                    };
+                    setInterval( updatecounter, 1000);
+                </script>
+            </div>
+        </div>
+    </section>
+    <section id="evento" class="section dark">
+        <div class="text-container">
+            <h2>Te Esperamos</h2>
+            <p>Este verano, el festival MetalRock te invita a vibrar al ritmo del mejor rock y metal. Un lugar donde la música cobra vida y cada nota te lleva a un viaje épico.</p>
+            <p>Prepárate para noches de luces deslumbrantes y sonidos que te harán sentir cada acorde. MetalRock es tu destino para una experiencia musical auténtica y poderosa.</p>
+        </div>
+    </section>
+    <section id="participantes" class="section">
+        <div class="text-container">
+            <h2>Bandas Participantes</h2>
+            <div class="cards">
+                <article class="card">
+                    <figure class="card__image">
+                        <img src="https://th.bing.com/th/id/R.ad7b5ada6b78cbaaffd1f0caac20900c?rik=7LWXzvBWB49yrw&riu=http%3a%2f%2frockcircus.net%2fwp-content%2fuploads%2f2013%2f05%2f970778.jpg&ehk=Pd1JFRu2ZJOCfxX%2bH3NaJGIWowiyd8s376VllfAANDs%3d&risl=&pid=ImgRaw&r=0" alt="foto del grupo warcry"/>
+                    </figure>
+                    <details class="card__details">
+                        <figure class="card__image">
+                            <img src="https://blog.ticketmaster.es/wp-content/uploads/2023/05/WarCry23-_TM-890x490-1-738x415.jpg" alt="foto del grupo warcry"/>
+                        </figure>
+                        <summary>Warcry</summary>
+                        <p>Un referente del power metal español.</p>
+                        <p>WarCry, nacida en Oviedo, España, en el año 2001, es una banda de heavy metal que se ha consolidado como un referente del género, tanto a nivel nacional como internacional.</p>
+                    </details>
+                </article>
+                <article class="card">
+                    <figure class="card__image">
+                        <img src="https://wearemusic.es/wp-content/uploads/2023/01/kabrones-696x464-1.jpg" alt="foto del grupo kabrones"/>
+                    </figure>
+                    <details class="card__details">
+                        <figure class="card__image">
+                            <img src="https://i0.wp.com/losmejoresrock.com/wp-content/uploads/2023/10/kabrones-los-mago.jpeg?fit=638%2C389&ssl=1" alt="foto del grupo kabrones"/>
+                        </figure>
+                        <summary>Kabrones</summary>
+                        <p>Kabrones es un grupo de rock español formado por ex-miembros de la legendaria banda Mägo de Oz.</p>
+                        <p>Su estilo musical se caracteriza por ser rock duro con influencias de heavy metal, celta y folk.</p>
+                    </details>
+                </article>
+                <article class="card">
+                    <figure class="card__image">
+                        <img src="https://juventudfuenla.com/wp-content/uploads/2020/09/B13_1.png" alt="foto del grupo leo jimenez"/>
+                    </figure>
+                    <details class="card__details">
+                        <figure class="card__image">
+                            <img src="https://www.rafabasa.com/wp-content/uploads/imagenes/web/leo_jimenez/leo2023_1gira_500x267.jpg" alt="foto del grupo leo jimenez"/>
+                        </figure>
+                        <summary>Leo Jimenez</summary>
+                        <p>Leo Jiménez ha sido reconocido por su potente voz, su carisma en el escenario y su capacidad para componer canciones memorables.</p>
+                        <p>Es conocido por ser una de las figuras más importantes del heavy metal y rock español, con una trayectoria musical que abarca más de dos décadas.</p>
+                    </details>
+                </article>
+                <article class="card">
+                    <figure class="card__image">
+                        <img src="https://2.bp.blogspot.com/-RJzZRYbrT8o/WRr2W9c8bUI/AAAAAAAALRM/yUAbdh8M_TAtJ5bBv3CK1t6ugBazY2TdACLcB/s1600/Avalanch%2Blogo.jpg" alt="foto del grupo avalanch"/>
+                    </figure>
+                    <details class="card__details">
+                        <figure class="card__image">
+                            <img src="https://i0.wp.com/metalfamily.es/wp-content/uploads/2024/04/AVALANCH-2024.jpg?fit=500%2C267&ssl=1" alt="foto del grupo avalanch"/>
+                        </figure>
+                        <summary>Avalanch</summary>
+                        <p>Avalanch es una banda española de heavy metal formada en 1993 en Asturias. Considerados uno de los grupos líderes del heavy metal en español.</p>
+                        <p>Ha combinado a lo largo de su trayectoria el power metal y el metal progresivo con elementos de hard rock, pop y folk.</p>
+                    </details>
+                </article>
+                <article class="card">
+                    <figure class="card__image">
+                        <img src="https://th.bing.com/th/id/R.501383d82a46f51aefbec05088cf81ea?rik=8OynrG%2bo2jtvgw&riu=http%3a%2f%2fredhardnheavy.com%2fwp-content%2fuploads%2f2020%2f09%2f101819650_3001511373257767_6993571147148188493_o.jpg&ehk=a6p2UcB7Ck7ywODd6SasAGXrwnyWHhzh4cDuGX1ucyI%3d&risl=&pid=ImgRaw&r=0" alt="foto del grupo zenobia">
+                    </figure>
+                    <details class="card__details">
+                        <figure class="card__image">
+                            <img src="https://www.rafabasa.com/wp-content/uploads/2021/08/zenobia2021_1_500x267.jpg" alt="foto del grupo zenobia">
+                        </figure>
+                        <summary>Zenobia</summary>
+                        <p>Zenobia es una banda española de power metal sinfónico nacida en Vitoria-Gasteiz en el año 2003.</p>
+                        <p>Su sonido combina la potencia del heavy metal clásico con orquestaciones y un toque moderno. Las letras exploran temas profundos como la lucha personal, la fantasía y la superación.</p>
+                    </details>
+                </article>
+                <article class="card">
+                    <figure class="card__image">
+                        <img src="./assets/spinoletras.jpg" alt="una foto del grupo spino">
+                    </figure>
+                    <details class="card__details">
+                        <figure class="card__image">
+                            <img src="./assets/spino.jpg" alt="una foto del grupo spino">
+                        </figure>
+                        <summary>Spino</summary>
+                        <p>Prepárate para un viaje sonoro y épico con Spino, la banda que fusiona lo mejor del heavy metal, power metal y hard rock.</p>
+                        <p>Imagina guitarras afiladas como espadas, ritmos que te hacen temblar y melodías que te elevan a la gloria.</p>
+                    </details>
+                </article>
+            </div>
+        </div>
+    </section>
+    <section id="presentacion" class="section dark">
+        <div class="text-container vertical-center">
+            <h2>Video de presentacion</h2>
+            <video controls> <!-- autoplay loop -->
+                <source src="https://d1ifbi2yr6p9bt.cloudfront.net/5870682/1715185055075-7971e7e6b464dc60cd9cf928d9668f2d.mp4?v=1715177958000">
+            </video>
+        </div>
+    </section>
+    <section id="inscripcion" class="section">
+        <div class="text-container vertical-center">
+            <h2>Formulario de inscripcion</h2>        
+            <form id="contact-form" class="contact-form">
+                <div class="form-control">
+                    <label for="name">Nombre</label>
+                    <input type="text" id="name" name="name" placeholder="Inserta tu Nombre" required> 
+                </div>
+                <div class="form-control">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" placeholder="Email@Email.com" required>
+                </div> 
+                <div class="form-control radio">
+                <p>¿Cómo nos conociste?</p>
+                    <input type="radio" id="boca-a-boca" name="how-you-met-us">            
+                    <label for="boca-a-boca">Boca a boca</label>
+                <!-- </div>
+                <div class="form-control radio"> -->
+                    <input type="radio" id="redes-sociales" name="how-you-met-us">
+                    <label for="redes-sociales">Redes sociales</label>
+                </div>
+                <div class="form-control radio" >
+                <p>¿Cuantos años tienes?</p>
+                    <input type="radio" id="+18" name="How-old-are-you" required>            
+                    <label for="+18">Mayor de 18 años</label>
+                <!-- </div>
+                <div class="form-control radio"> -->
+                    <input type="radio" id="-18" name="How-old-are-you" required>
+                    <label for="-18">Menor de 18 años</label>
+                </div>
+                <div class="form-control">
+                    <label for="days">¿Cuantos días quieres asistir al Evento?</label>
+                    <select name="days" id="days">
+                        <option value="1">1 Día</option>
+                        <option value="2">2 Días</option>
+                        <option value="3">3 Días</option>
+                    </select>
+                </div>
+                <div class="form-control">
+                    <label for="language">¿Cual es tu estilo Rock favorito?</label>
+                    <input list="language">
+                    <datalist id="language" name="language">
+                        <option value="rock">Rock</option>
+                        <option value="heavymetal">HeavyMetal</option>
+                        <option value="poweermetal">PowerMetal</option>
+                        <option value="hardrock">HardrRock</option>
+                        <option value="otros">Otros</option>
+                    </datalist>
+                </div>
+                <div class="form-control checkbox">
+                    <input type="checkbox" id="legal" name="legal" required>
+                    <label for="legal">He leído y acepto la condiciones de privacidad</label>
+                </div>
+                <input type="submit" value="Apuntarse al Evento">
+            </form>
+            <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+        <script type="text/javascript">
+            (function() {
+                // https://dashboard.emailjs.com/admin/account
+                emailjs.init({
+                publicKey: "InghWj3nQFkEVddpg",
+                });
+            })();
+        </script>
+        <script type="text/javascript">
+            window.onload = function() {
+                document.getElementById('contact-form').addEventListener('submit', function(event) {
+                    event.preventDefault();
+                    // these IDs from the previous steps
+                    emailjs.sendForm('service_sf2tiuq', 'template_xmsgmfa', this)
+                        .then(() => {
+                            console.log('SUCCESS!');
+                        }, (error) => {
+                            console.log('FAILED...', error);
+                        });
+                });
+            }
+        </script>
+        </div>
+    </section>
+    <section id="mapa" class="section dark">
+        <div class="text-container vertical-center">
+            <h2>Mapa</h2>
+            <img src="./assets/plano.png" alt="mapa del evento" usemap="#plano"/>
+            <map name="plano">
+                <area 
+                shape="rect" 
+                coords="0,0,100,100" 
+                href="https://www.google.es/" 
+                alt="entrada"
+                />
+            </map>
+        </div>
+    </section>
+    <footer class="footer dark">
+        <!-- <iframe width="753" height="424" src="https://www.youtube.com/embed/lCjVa1c5zKw" title="METAL 24/7 Live Stream - NUCLEAR BLAST RECORDS" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
+        <iframe width="753" height="424" src="https://www.youtube.com/embed/q0CdLjexlaU" title="Saurom feat. Zeta &amp; Jose Andrea: No Seré Yo | Saurom Juglar Fest 2024 🔥💀" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+    </footer>
+    
+</body>
+</html>
